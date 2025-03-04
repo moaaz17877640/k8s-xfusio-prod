@@ -1,5 +1,3 @@
-
-```markdown
 # k8s-xfusio-prod
 
 This repository contains the production configuration for the k8s-xfusio project.
