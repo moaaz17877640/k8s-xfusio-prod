@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: red-datacenter-t1q5
+spec:
+  initContainers:
+  - name: red-init-datacenter-t1q5
+    image: debian:latest
+    command: ["/bin/bash", "-c"]
+    args: ["echo 'Welcome!'"]
+  containers:
+  - name: red-main-datacenter-t1q5
+    image: debian:latest
+    command: ["/bin/bash", "-c"]
+    args: ["sleep 1000"]

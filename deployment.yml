@@ -1,0 +1,22 @@
+# Create a service named deployment-svc-t5q2. It must be a ClusterIP service 
+# which should use port 8090 and target port should be 80.
+
+# Created service 'deployment-svc-t5q2'
+
+# Service type is 'ClusterIP'
+
+# Service 'deployment-svc-t5q2' port number is '8090'
+
+# Service 'deployment-svc-t5q2' target port is '80'
+apiVersion: v1
+kind: Service
+metadata:
+  name: deployment-svc-t5q2
+spec:
+  type: ClusterIP
+  selector:
+    app: httpd_app_t3q4
+    type: front-end-t3q4
+  ports:
+    - port: 8090
+      targetPort: 80
